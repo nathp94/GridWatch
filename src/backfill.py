@@ -2,9 +2,10 @@ from pathlib import Path
 
 from google.cloud import storage
 
+import os
 
-PROJECT_ID = "gridwatch-510021"
-BUCKET_NAME = "gridwatch-data"
+PROJECT_ID = os.environ["GCP_PROJECT_ID"]
+BUCKET_NAME = os.environ["GCS_BUCKET_NAME"]
 
 CSV_PATH = Path("data/eco2mix-regional-cons-def.csv")
 
